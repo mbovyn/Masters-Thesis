@@ -1,0 +1,164 @@
+\thesistitle{Beyond Motors: How Cargo And Environment Can Direct Intracellular Cargo Transport}
+
+\degreename{Doctor of Philosophy}
+
+% Use the wording given in the official list of degrees awarded by UCI:
+% http://www.rgs.uci.edu/grad/academic/degrees_offered.htm
+\degreefield{Physics}
+
+% Your name as it appears on official UCI records.
+\authorname{Matt Bovyn}
+
+% Use the full name of each committee member.
+\committeechair{Professor Jun Allard}
+\othercommitteemembers
+{
+  Professor Steve Gross, Co-Advisor\\
+  Professor Clare Yu\\
+  Professor Arthur Lander\\
+  Professor Lee Bardwell, Outside Member
+}
+
+\degreeyear{15 September, 2017}
+
+\copyrightdeclaration
+{
+  {\copyright} {\Degreeyear} \Authorname
+}
+
+% If you have previously published parts of your manuscript, you must list the
+% copyright holders; see Section 3.2 of the UCI Thesis and Dissertation Manual.
+% Otherwise, this section may be omitted.
+% \prepublishedcopyrightdeclaration
+% {
+% 	Chapter 4 {\copyright} 2003 Springer-Verlag \\
+% 	Portion of Chapter 5 {\copyright} 1999 John Wiley \& Sons, Inc. \\
+% 	All other materials {\copyright} {\Degreeyear} \Authorname
+% }
+
+% The dedication page is optional.
+%\dedications
+%{
+%  (Optional dedication page)
+%
+%  To ...
+%}
+
+\acknowledgments
+{
+Foremost, I'd like to thank my advisors Jun Allard and Steve Gross for their constant support. I would also like to thank my lab mates in the Allard Lab (Lara Clemens, Abdon Iniguez, Kathryn Manakova, and Derek Bryant) and in the Gross Lab (Babu Reddy and Dail Chapman) for productive conversations and general help of all kinds. I would also like to thank the members of the UCI Center for Biological Systems for productive and enlightening conversations, as well as the training I needed to take on these projects.
+
+I was supported by NIH T32 EB009418-07 to Arthur Lander and Qing Nie, as well as NIH R01 GM123068 to Jun Allard and Steve Gross.
+}
+
+
+% Some custom commands for your list of publications and software.
+\newcommand{\mypubentry}[3]{
+  \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}p{4.5in}r}
+    \textbf{#1} & \textbf{#2} \\
+    \multicolumn{2}{@{\extracolsep{\fill}}p{.95\textwidth}}{#3}\vspace{6pt} \\
+  \end{tabular*}
+}
+\newcommand{\mysoftentry}[3]{
+  \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}lr}
+    \textbf{#1} & \url{#2} \\
+    \multicolumn{2}{@{\extracolsep{\fill}}p{.95\textwidth}}
+    {\emph{#3}}\vspace{-6pt} \\
+  \end{tabular*}
+}
+
+% Include, at minimum, a listing of your degrees and educational
+% achievements with dates and the school where the degrees were
+% earned. This should include the degree currently being
+% attained. Other than that it's mostly up to you what to include here
+% and how to format it, below is just an example.
+\curriculumvitae
+{
+
+\textbf{EDUCATION}
+
+  \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}lr}
+    \textbf{Doctor of Philosophy in Computer Science} & \textbf{2012} \\
+    \vspace{6pt}
+    University name & \emph{City, State} \\
+    \textbf{Bachelor of Science in Computational Sciences} & \textbf{2007} \\
+    \vspace{6pt}
+    Another university name & \emph{City, State} \\
+  \end{tabular*}
+
+\vspace{12pt}
+\textbf{RESEARCH EXPERIENCE}
+
+  \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}lr}
+    \textbf{Graduate Research Assistant} & \textbf{2007--2012} \\
+    \vspace{6pt}
+    University of California, Irvine & \emph{Irvine, California} \\
+  \end{tabular*}
+
+\vspace{12pt}
+\textbf{TEACHING EXPERIENCE}
+
+  \begin{tabular*}{1\textwidth}{@{\extracolsep{\fill}}lr}
+    \textbf{Teaching Assistant} & \textbf{2009--2010} \\
+    \vspace{6pt}
+    University name & \emph{City, State} \\
+  \end{tabular*}
+
+\pagebreak
+
+\textbf{REFEREED JOURNAL PUBLICATIONS}
+
+  \mypubentry{Ground-breaking article}{2012}{Journal name}
+
+\vspace{12pt}
+\textbf{REFEREED CONFERENCE PUBLICATIONS}
+
+  \mypubentry{Awesome paper}{Jun 2011}{Conference name}
+  \mypubentry{Another awesome paper}{Aug 2012}{Conference name}
+
+\vspace{12pt}
+\textbf{SOFTWARE}
+
+  \mysoftentry{Magical tool}{http://your.url.here/}
+  {C++ algorithm that solves TSP in polynomial time.}
+
+}
+
+% The abstract should not be over 350 words, although that's
+% supposedly somewhat of a soft constraint.
+\thesisabstract
+{
+  Eukaryotic cells maintain a high level of internal organization and change it dynamically to respond to their environment. The localization of organelles such as mitochondria and lipid droplets is often determined by their transport along the microtubule cytoskeleton by molecular motors in the kinesin superfamily and cytoplasmic dynein. The single molecule function of these motors has been intensely studied, but it remains unclear how the motile properties of these molecules are harnessed by the cell to localize cargos to the correct place. The work in this document explores how the properties of the motors, the cellular environment, and the cargos themselves conspire direct intracellular traffic. First, we explore how the organization of a basic element of the cellular environment --- the microtubule cytoskeleton --- can determine cargo routing. In a second project, I propose to investigate how the manner in which motors are attached to the cargo can influence transport. In a third project, I propose a combination of experimental and computational studies to examine the relationship between the binding rate of individual motor proteins to microtubules and binding rates of the cargos they are attached to. Furthermore, I propose to investigate how modulation of this relationship may allow the cell to regulate transport.
+}
+
+\executivesummary
+{
+ Active transport of intracellular cargos along microtubules is essential for organization and function of eukaryotic cells. The properties of the molecular motor proteins that power this transport have been intensely studied on the single molecule level, but it remains unclear how these motors function in groups and how the cell controls the function of the motors to deliver cargos to the correct place at the correct time. Furthermore, the cell must direct the transport of a variety of cargos with different destinations along the same network of microtubule ``roadways'', using the same set of molecular motors to power their transport. The projects presented here address mechanisms by which the cell might achieve this multiplexed control.
+
+The projects investigate cargo transport through mathematical models and through experiments, both in vitro and in cells. The mathematical models are derived by using force balance to find the equations of motion for the cargo, modeled as a spherical rigid body. A Brownian force term is included, making the equations stochastic. To solve these equations, along with implementing motor stepping, binding and unbinding, we've written a hybrid Euler-Maryuama-Gillespie simulation. The experiments make use of differential interference contrast microscopy to visualize cells and organelles, particularly lipid droplets. Optical tweezers are used to measure forces on cargos created by molecular motors both in vitro and in cells.
+
+\subsection*{Project 1: Cargo Routing at Microtubule Intersections}
+
+In collaboration with the Vershinin Lab at University of Utah, we investigate how cargos navigate microtubule intersections in 3D. While cargo transport is often studied only along a single microtubule, the microtubule network is usually a dense mesh, with microtubules frequently crossing each other close enough together for cargos to encounter both microtubules simultaneously. When cargos encounter such an intersection, do they switch to the intersecting microtubule or pass it by? The Vershinin Lab conducted a series of in vitro experiments with kinesin motors attached to glass bead cargos and found that the probability for the cargo to switch tracks depends strongly on the geometry of the intersection. We constructed a simulation to investigate how the properties of the molecular motors and cargo lead to the switching probabilities observed. We report that well known properties of the molecular motors lead to switching probabilities close to those observed in experiment. Furthermore, we report that observed switching probabilities stem from unexpected effects, such as cargo diffusion being constrained by motors bound to the microtubule. \textbf{Our results predict high switching rates for intersections in which microtubules are spaced less than one quarter of a cargo diameter apart, suggesting the cell could regulate switching by modulating microtubule spacing.} In this work, theory allows insight into mechanisms which would otherwise be unobservable (either because of experimental limitations, like finding the number of motors engaged, or because they are in general not directly observable, like force states). This insight allows us to predict what features of the experimental data are likely to generalize to other cargos and in vivo situations, and which are not. This work is currently in revision.
+
+\subsection*{Project 2: Freedom of Motors in the Cargo Membrane}
+
+The majority of past models of cargo transport (both experimental and mathematical) have considered motors which are stuck rigidly to the cargo which they transport. However, most cargos are membrane bound, possibly allowing motors to flow along their surface. I propose to extend the model used in project 1 to study the effects that freedom of the motors in the cargo membrane may have on cargo transport. To do so, the simulation must capture two viscosities (membrane and bulk fluid) and two modes of diffusion, demanding that a set of fluctuation dissipation-theorem relationships be simultaneously satisfied. \textbf{This gives rise to correlated noise, necessitating a more complex simulation than those that currently exist.} We have constructed and tested these components of the simulation. The results of these tests are included here. I propose to gather a variety of simulation results comparing the performance of cargos whose motors are free to diffuse with cargos whose motors are fixed, either clustered in one spot or distributed on the surface. The distance cargos travel, as well as how they overcome obstacles will be compared. Furthermore, \textbf{initial results suggest that motor freedom may imbue the cargo with emergent properties, such as dynamic clustering of motors and a type of ``memory'' after perturbation.} Simulation results will delineate the magnitude of possible transport assisting or hindering effects, as well as their dependance on parameters such as size and viscosity. We hope these dependences may suggest reasons for the cell to control motor distribution on cargos, as evidence suggests it does in some cases. Without recourse to modeling, it would be very difficult to disentangle the effects of changes in motor organization from other differences between cargos, either with artificial cargos or those purified from cells. We hope doing so will allow us to predict what the cell might modulate to control transport, and what transport properties the cell may be trying to achieve by doing so.
+
+\subsection*{Project 3: Characterization of cargo and motor on rates}
+
+While the stepping mechanisms and unbinding behavior of molecular motors have been intensely studied, their binding behavior has remained mostly unexplored. An understanding of binding will allow us to better constrain the model of cargo transport and more importantly will allow us to explore a hitherto little studied mode of cargo transport regulation. Furthermore, on rates in protein-protein interactions and mechanisms by which it may be modified are not well understood. Therefore, an understanding of on rate and its regulation in this system may help advance our understanding in general. To investigate molecular motor on rates, we will combine a new in vitro binding assay with computational modeling. In a new assay developed by the Gross lab, binding rate is measured by quantifying the time between attempts of a motor laden bead to walk along a microtubule in an optical trap. To understand how the measured cargo on rate relates to the on rate of a single motor to the microtubule, we will use the mathematical model developed in projects 1 and 2. Using this combined approach, we will investigate several mechanisms the cell may use to modulate on rate: geometry, microtubule post-translational modifications, and microtubule associated proteins, such as tau. In particular, we are excited that \textbf{physical interactions which push the cargo away from the microtubule or pull it close may provide a unifying paradigm of cargo transport regulation by on rate control. This could allow for sorting by properties like cargo size, motor length, and cargo rigidity.} In this work, we hope theory will allow us to extract quantitative properties from fairly artificial, in vitro experiments which are generalizable to different cargos in different physical situations. 
+}
+
+\timelineofcompletion
+{
+ \begin{center}
+ \includegraphics[scale=.75]{timeline}
+ \end{center}
+}
+
+
+%%% Local Variables: ***
+%%% mode: latex ***
+%%% TeX-master: "thesis.tex" ***
+%%% End: ***
