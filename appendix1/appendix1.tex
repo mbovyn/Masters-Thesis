@@ -213,11 +213,11 @@ where $\rvec{\vec{p}}$ is a vector from point $\vec{p}$ to the nearest point on 
 %shortcut for R_MT/ceq because I want the parentheses to be the same size
 \def\rbyceq{\frac{R_\text{MT}}{\vqty\bigg{\ceq}}}
 %
-\begin{equation} \label{eq:r_vec}
+\begin{multline} \label{eq:r_vec}
 \rvec{\vec{p}} = 
-\left( 1- \rbyceq \right)  
+\left( 1- \rbyceq \right)  \\
 \left( \ceq \vphantom{\rbyceq} \right).
-\end{equation}
+\end{multline}
 
 %------------------------------------------------------------------------------------------------------------------------------
 \subsubsection*{Force of gravity}
@@ -284,11 +284,11 @@ and
 Equation \ref{eq:cSDE} is a specific implementation of the overdamped Langevin equation, used in Brownian dynamics. Equation \ref{eq:thetaSDE} is its rotational counterpart.
 
 We discretize these equations according to the Euler-Maruyama method. For an update from the $n$th timestep at time $t_n$ to the next time $t_{n+1}$ with $\Delta t \equiv t_{n+1}-t_n$, the discretization is
-\begin{equation} \label{eq:cSDE_discretized}
+\begin{multline} \label{eq:cSDE_discretized}
 \vec{c}(t_{n+1}) = \vec{c}(t_n) +
-\frac{1}{6 \pi \eta R} \left( \sum_i \vec{F}_m^i \left( \vec{a}^i(t_n) ,\vec{h}^i(t_n) \right) + \sum_j \vec{F}_s^j(\vec{c}(t_n)) + \vec{F}_g \right) \Delta t + \\
-\sqrt{2 \frac{k_B T}{6 \pi \eta R} \Delta t} \;\vec{G}_c(t_n)
-\end{equation}
+\frac{1}{6 \pi \eta R} \left( \sum_i \vec{F}_m^i \left( \vec{a}^i(t_n) ,\vec{h}^i(t_n) \right) + \sum_j \vec{F}_s^j(\vec{c}(t_n)) + \vec{F}_g \right) \Delta t \\
++ \sqrt{2 \frac{k_B T}{6 \pi \eta R} \Delta t} \;\vec{G}_c(t_n)
+\end{multline}
 and
 \begin{equation} \label{eq:thetaSDE_discretized}
 \vec{\theta}(t_{n+1})= \vec{\theta}(t_n) +
@@ -384,7 +384,7 @@ The numerical simulation is written in C. It takes approximately \SI{.5}{\second
 The kif5A motors used in experiments are members of the well studied kinesin-1 family. As such,  many of the model parameters have been estimated in previous experiments. The parameters used to simulate the model are given in table \ref{tab:params}. There are two parameters in the model not well constrained by experiments in the literature: the number of motors on a cargo, $N$, and the on rate of a motor given that it is close enough to the MT to bind, $\pi_0^{\text{micro}}$.
 
 \begin{table}
-\begin{tabular}{p{.08\linewidth} p{.3\linewidth} p{.15\linewidth} p{.3\linewidth}} 
+\begin{tabular}{p{.1\linewidth} p{.28\linewidth} p{.15\linewidth} p{.3\linewidth}} 
 \hline Parameter & Description & Value & Notes \\ \hline
 
 $N$ & Number of motors on the bead & \num{30} & Determined by fit to experiments in this paper \\
@@ -405,7 +405,7 @@ $F_s$ & Stall force & \SI{5}{\pico\newton} & Measured in \cite{Visscher1999,Kunw
 
 $F_d$ & Critical detachment force & \SI{4}{\pico\newton} & Measured in \cite{Schnitzer2000,Kunwar2011,Milic2014} \\
 
-$v$ & Unloaded motor velocity & \SI{1}{\micro\meter\per\second} & From model cargo velocities measured here \\
+$v$ & Unloaded motor velocity & \SI{1}{\micro\meter\per\second} & Velocities measured here \\
 
 $d$ & Step size & \SI{8}{\nano\meter} & Measured in \cite{Svoboda1993} \\
 
@@ -417,11 +417,11 @@ $R$ & Cargo bead radius & \SI{.5}{\micro\meter} & Provided by manufacturer \\
 
 $\rho_b$ & Cargo bead density & \SI{2.0}{\gram\per\centi\meter^3} & Provided by manufacturer\\
 
-$\rho_w$ & Density of experimental medium & \SI{1.0}{\gram\per\centi\meter^3} & Estimated as density of water \\
+$\rho_w$ & Density of experimental medium & \SI{1.0}{\gram\per\centi\meter^3} & Density of water \\
 
 $\vec{g}$ & Vector for gravitational acceleration & (0,0,-9.8) \SI{}{\meter\per\second^2} & \\
 
-$\eta$ & Viscosity of fluid & \SI{8.5E-4}{\pascal\second} & Estimated as viscosity of water \\
+$\eta$ & Viscosity of fluid & \SI{8.5E-4}{\pascal\second} & Viscosity of water \\
 
 $T$ & Temperature of the fluid & \SI{293}{\kelvin} & Experiments performed at room temperature \\ \hline
 
@@ -553,10 +553,10 @@ Ensembles of trajectories were simulated for varying separations and angles betw
 \subsection{Explanation of ToW probability} \label{sec:ToW}
 
 In agreement with intuition, ToW probability increases with the distance the cargo must travel while able to reach both MTs simultaneously, which we call the ToW zone, denoted $x_\text{ToW}$. The extent of the ToW zone was calculated from geometry diagrammed in figure \ref{fig:heuristic}, and is given by
-\begin{equation} \label{eq:ToW_zone}
-x_\text{ToW}=2\frac{ \sqrt{4 (L+R+R_{MT})^2-\left( (\xmt^1-\xmt^2)\cdot \hat{z} \right)^2} }{\norm{\dmt^1 \cross \dmt^2}}
+\begin{multline} \label{eq:ToW_zone}
+x_\text{ToW}=2\frac{ \sqrt{4 (L+R+R_{MT})^2-\left( (\xmt^1-\xmt^2)\cdot \hat{z} \right)^2} }{\norm{\dmt^1 \cross \dmt^2}} \\
 = 2\frac{ \sqrt{4 (L+R+R_{MT})^2-\left( \text{separation distance} \right)^2} }{\sin(\text{MT angle})}.
-\end{equation}
+\end{multline}
 The probability a cargo will undergo ToW can then be understood as a competition between the rate at which the cargo binds to the crossing MT, which happens at a rate which we denote $\kon^\text{macro}$, and the rate it leaves the ToW zone, which happens at a rate given by the cargo velocity (equal to the maximum single motor velocity $v$) divided by the ToW zone length. Thus,
 \begin{equation} \label{eq:rate_war}
 p(\text{ToW})=\frac{ \kon^\text{macro}}{\kon^\text{macro} +  \frac{v}{x_\text{ToW}}}.
