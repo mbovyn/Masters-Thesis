@@ -26,26 +26,9 @@ The structure of MTs allow them to perform these functions. MTs are tubular, con
 
 The tubular structure makes MTs rigid compared to other cellular filaments such as actin, with persistence lengths near \SI{1}{\milli\meter}, many times the size of an entire cell. Rigidity can vary with MT length and repeated bending \cite{Schaedel2015}.
 
-\subsection{Microtubule Associated Proteins}
-
-In cells, MTs are decorated with a variety of proteins deemed microtubule associated proteins (MAPs). MAPs have been found to play roles in stabilizing and destabilizing MTs, as well as aiding in localizing and organizing MTs \cite{Mandelkow1995}. The MAP tau is associated with a variety of neurodegenerative diseases deemed ``tauopathies", including Alzheimer's disease and chronic traumatic encephalopathy \cite{Kovacs2015}. Since tau overexpression has been shown to hinder transport in neurons \cite{Stamer2002}, as well as to differentially affect the ability of kinesin and dynein to transport cargo in vitro \cite{Vershinin2007,Vershinin2008,Dixit2008}, malfunctions in cargo transport have been implicated in the cause of neurodegeneration in tauopaties. The heterogenious distribution of tau in neurons \cite{Black1996,Kempf1996} supports a possible role for tau in localized cargo delivery.
-
-\subsection{Microtubule Post-translational Modifications}
-
-Tubulin possess several sites known to undergo different post-translatinoal modifications (PTMs), many of which are reversible \cite{Garnham2012}. These sites are predominantly located in the C-terminal tail region, located on the outer MT surface as shown in figure \ref{fig:PTMs}. PTMs are distributed heterogeneously on the MT network \cite{Garnham2012}, with specific subsets of modified MTs implicated in transport of specific cargos \cite{Herms2015}.
-
-A survey of the impact of various PTMs on motor behavior \cite{Sirajuddin2014} showed that a single PTM can impact one or more motor properties, as well as impacting different motors in different ways. Furthermore, different PTMs have different impacts on a single motor. The richness of this behavior lends credence to the `tubulin-code' hypothesis, which predicts that combinations of tubulin isotypes, PTMs and MAPs encode directions for the localization and activity of cargos and other proteins. Modeling shows that even weak localization of PTMs may be able to direct strong cargo localization \cite{Iniguez2016}.
-
-\begin{figure}
-\floatbox[{\capbeside\thisfloatsetup{capbesideposition={right,top}}}]{figure}[\FBwidth]
-{\caption[Microtubule Post-translational Modification Sites]{Microtubules undergo post-translational modifications at a variety of sites, mostly in the C-terminal tail region located on the outside MT surface. Figure from \cite{Garnham2012}.}
-\label{fig:PTMs}}
-{\includegraphics[scale=.6]{background/PTMs}}
-\end{figure}
-
 \section{Molecular Motors}
 
-Molecular motors are a class of enzymes (specifically ATPases), which convert the chemical energy bound up in ATP into mechanical work. There are three classes of molecular motors involved in cargo transport: kinesin superfamiliy motors and cytoplasmic dynein which walk along microtubules, and myosin superfamily motors which walk along actin. Here we'll focus on the former two motors.
+Molecular motors are a class of enzymes (specifically ATPases), which convert the chemical energy bound up in ATP into mechanical work. There are three classes of molecular motors involved in cargo transport: kinesin superfamiliy motors and cytoplasmic dynein which walk along microtubules, and myosin superfamily motors which walk along actin. Here we'll focus on kinesin.
 
 \subsection{Kinesin} \label{sec:kinesin}
 
@@ -63,19 +46,6 @@ Kinesin unbinds from the microtubule at a rate that also depends on the load exp
 
 It has been found that the kinesin stalk is stiff in tension \cite{Kojima1997} and also resists compression to a lesser degree \cite{Jeney2004}. It has little resistance to torsion \cite{Hunt1993,Gutierrez-Medina2009}.
 
-\subsection{Dynein}
-
-Like kinesin, cytoplasmic dynein-1 is a homodimeric motor which processively steps along MTs. However, unlike kinesin, there is only one dynein that transports cargos in the cytoplasm \cite{Bhabha2016}. Also unlike kinesin, the two dynein heads step largely independently of each other \cite{DeWitt2012}. Furthermore, dynein step sizes are variable and often include sideways and backward steps \cite{Bhabha2016}. Purified mammalian dynein motors are quite weak in vitro, exerting only \SI{1}{\pico\newton} of force \cite{Mallik2004} compared with kinesin's \SI{6}{\pico\newton}.
-
-Several sets of proteins are known to regulate dynein force production. Lis1 and NudE work together to put dynein into a persistent force producing state in vitro \cite{McKenney2010}. These proteins are also necessary for the recently discovered force adaptation under load displayed by lipid droplets in vivo \cite{Reddy2016}. Dynactin seems to be involved in almost every task carried out by dynein \cite{Cianfrocco2015}. When paired with one of the adaptor proteins BicD2, Rab11-FIP3, Spindly, or hook, it is capable of dramatically increasing dynein's processivity \cite{McKenney2014}. Furthermore, dynein-dynactin-BicD2 complexes exert much higher forces in vitro, stalling at \SI{5}{\pico\newton}, comparable to kinesin \cite{Belyy2016}.
-
-\begin{figure}
-\floatbox[{\capbeside\thisfloatsetup{capbesideposition={right,top}}}]{figure}[\FBwidth]
-{\caption[Dynein and its regulators]{A cartoon of dynein, showing its domains. Included in the inset are proteins known in regulate dynein function. Figure from \cite{Kardon2009}.
-\label{fig:dynein}}}
-{\includegraphics[scale=.5]{background/dynein_interactors}}
-\end{figure}
-
 \section{Cargos}
 
 A wide variety of organelle cargos such as lipid droplets, mitochondria, melanosomes, peroxisomes, pigment granules, endosomes, secretory vesicles, RNA granules, and virions are transported bi-directionally by molecular motors \cite{Hancock2014,Gross2004}. Long distance cargo transport is also particularly important in neurons. Cargos such as dense core vesicles carrying neuropeptide and synaptic vesicles carrying neurotransmitter must be transported down the length of axons, often millimeters to centimeters long, and delivered at presynapses \cite{Maeder2014}. These observations lead to a picture of cargo transport where bidirectional motion is controlled to correctly localize cargos, as shown in figure \ref{fig:cargo_delivery}.
@@ -87,12 +57,6 @@ A wide variety of organelle cargos such as lipid droplets, mitochondria, melanos
 \caption[Bidirectional motion and cargo delivery]{A variety of cargos have been shown to move bidirectionally on MTs in cells, as shown on the left. By biasing this bidirectional motion, the cell may be able to deliver cargos to specific locations in neurons and other cell types, as shown on the right. Figures on left and bottom right from \cite{Hancock2014}. Figure on top right from \cite{Gross2004}.}
 \label{fig:cargo_delivery}
 \end{figure}
-
-\subsection{Lipid Droplets}
-
-Lipid droplets (LDs) contain the cell's store of neutral lipids. These lipids can be used to create new membranes, or broken down to be used in metabolism when glucose supplies are lacking. LDs consist of a core of neutral lipids, surrounded by a single layered phospholipid membrane. \cite{Welte2015}.
-
-The lipid core gives the LD a contrasting index of refraction compared to the surrounding cytoplasm. This makes the LD an ideal target for both DIC microscopy and optical trapping \cite{Reddy2016}. The importance of transport to LD biology is highlighted in a recent study that showed LDs move from the near the membrane (where the lipid supplies are putatively being used to make new membrane) into contact with mitochondria when the cell is starved of glucose \cite{Herms2015}.
 
 \section{Previous models of cargo transport}
 
