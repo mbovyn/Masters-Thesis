@@ -61,6 +61,13 @@ positions in the left panel and are positioned identically in middle and right p
 
 Although BH displacements can help confirm ToW presence and duration, their greatest benefit is that they are an indicator of how many motors were exerting force on the bead. We set the trap stiffness at $\sim$\SI{1}{\pico\newton}/\SI{100}{\nano\meter}, so that a single kinesin motor could not pull the BH out of the trap (escape event) but two or more motors working together could do so readily (Fig. \ref{fig:BHforce}). Quantifying collective activity of multiple motors via trap escape forces is a well-established approach both in vivo \cite{Ashkin1990,Gross2002} and in vitro \cite{McKenney2010} and has been validated in silico \cite{McKenney2010}. This setup allowed us to control the surface density of motors on MCs by discarding assays in which BH escape fraction exceeded 25\% of total events. This provided refined control on top of the more crude and variable approach of controlling motor concentration at incubation time. It also provided confidence that ToWs in our assays were dominated by forces from 1-2 kinesin motors; more motors are likely engaged on the MT but not all are positioned to exert force during the ToW.
 
+\begin{figure}
+\centering
+\includegraphics[width=4in]{appendix2/FvsL}
+\caption[Restoring force on Bead Handles]{Restoring force on a glass bead (index of refraction 1.55, \SI{1000}{\nano\meter} radius) exerted by the HOT for various displacements from trap center. Calculations were performed using previously published software\cite{Nahmias2002}.}
+\label{fig:BHforce}
+\end{figure}
+
 \subsection{Mechanisms of cargo routing}
 
 The ability to sensitively detect ToW events allowed us to quantify their probability. We could then also examine the probability for the cargo to pass or switch, conditional on ToW occurrence. This analysis is informative because these probabilities reveal different aspects of cargo dynamics (Fig. \ref{fig:3}). Our data indicates that ToW probability is sensitive to 3D geometry: it is higher for narrower filament separations, and for acute/obtuse angles (Fig. \ref{fig:3}A). For \SI{0}{\micro\meter} separations, ToW probability is so high that significant differences as a function of angle may not be practical to measure. A different pattern of navigational outcomes emerges when trivial passes (no-ToW events) are omitted (Fig. \ref{fig:3}B vs Fig. \ref{fig:1}C). Four out of nine geometries show switch probabilities close to 50\%. We also record switch probabilities that are significantly higher than 50\% for the following geometries: \SI{0}{\micro\meter} normal, \SI{0}{\micro\meter} acute, and \SI{.5}{\micro\meter} acute (p $<$ .05 Barnard's test). We conclude that geometric constraints can promote or inhibit switching outcomes for ToW events.
@@ -99,10 +106,20 @@ Examples of Pre-ToW, ToW, and post-TOW states are shown (left, middle, right res
 \subsection{The influence of intersection geometry on ToW probability}
 
 The longer a cargo spends within reach of the primary and intersecting MTs (henceforth, the ToW zone), the more chances unbound motors on the cargo have, to engage the intersecting MT. This phenomenon can be understood from a simple, heuristic model. If we consider the cargo as having a single rate of binding to the crossing MT given by $k_{\text{on}}^\text{macro}$, the probability the cargo binds to the crossing MT before leaving the ToW zone is given by 
-\begin{equation} \label{eq:rate_war}
+\begin{equation} \label{eq:rate_war_main}
 p(\text{ToW})=\frac{k_{\text{on}}^\text{macro}}{k_{\text{on}}^\text{macro} +  v / d_\text{ToW} },
 \end{equation}
 where $v$ is the cargo velocity and $d_\text{ToW}$ is the length of the ToW zone. This simple model can accurately reproduce experimental ToW probabilities for both the \SI{.5}{\micro\meter} and \SI{1}{\micro\meter} separation distance geometries (Fig. \ref{fig:heuristicEXP}), but not for the \SI{0}{\micro\meter} separation geometries. This strongly suggests that there are mechanisms at play for \SI{0}{\micro\meter} separations which are not present at other distances (see below).
+
+\begin{figure}
+\centering
+\includegraphics[width=12cm]{appendix2/heuristicEXP.pdf}
+\caption[Solutions to the heuristic model for ToW probability]{Solutions to the heuristic model for ToW probability \\
+A heuristic model (given in equation \ref{eq:rate_war_main}) poses the probability of undergoing ToW as the the probability of the cargo binding (with constant binding rate) to the crossing MT before leaving the ToW zone (see equation \ref{eq:ToW_zone} and figure \ref{fig:heuristic}). 
+%Solutions to the model reproduce qualitative features of the simulated ToW probability for \SI{.5}{\micro\meter} and \SI{1}{\micro\meter} separation distances, shown in main text figure 4. The fact that the heuristic model does not qualitatively reproduce ToW probabilities for \SI{0}{\micro\meter} geometries highlights the importance of steric effects at these geometries. 
+Solutions shown as solid curves. Bars represent 95\% confidence intervals for corresponding experimental data. Bars for data at \SI{.5}{\micro\meter} shifted slightly to aid the eye. Solutions plotted with $k_\text{on}^\text{macro}$ set to \SI{1}{\per\second}.
+} \label{fig:heuristicEXP}
+\end{figure}
 
 On the other hand, our full model closely recapitulates all experimental ToW probabilities, including \SI{0}{\micro\meter} separation data. It is encouraging that the model captures several \textit{a priori} intuitive features of the system. For \SI{0}{\micro\meter} geometries, if a cargo is driven by multiple motors then there is guaranteed to be a pool of motors able to bind the crossing MT (namely, the already engaged motors). Thus, we \textit{a priori} expect the ToW probability for all angles to be close to 1, which our model reproduces. For \SI{.5}{\micro\meter} and \SI{1}{\micro\meter} geometries, we expect higher ToW probability for longer ToW zones (acute and obtuse angles). Indeed, simulated ToW probabilities were smallest for \SI{90}{\degree} intersections (Fig. \ref{fig:4}B). Also, as expected, they were symmetric about the normal angle (since kinesin binding is not affected by MT polarity). Simulated ToW probabilities also increased when MT separation decreased from \SI{1}{\micro\meter} to \SI{.5}{\micro\meter}, as expected. When the intersecting MT encounters the MC's midsection, at \SI{.5}{\micro\meter} separations, it samples more of the bead's surface area (especially when rotational diffusion is taken into account). Hence, at \SI{.5}{\micro\meter} separation, more motors are given a chance to engage on the crossing MT, which increases ToW probability.
 
@@ -110,9 +127,25 @@ On the other hand, our full model closely recapitulates all experimental ToW pro
 
 Experimentally, we observe a large range of geometries (most \SI{.5}{\micro\meter} and \SI{1}{\micro\meter} geometries) where the conditional probability to switch is $\sim$50\%. At first glance, this appears to be a relatively intuitive result: if ToW lasts $\sim$\SI{1}{\second} or more (our experimental ToW durations average $\sim$\SI{3}{\second}, Fig. \ref{fig:ToWtimes}), then the motor team engaged on the crossing MT should be able to reach steady state \cite{Erickson2011}, and become equal in number to the primary motor team. With two equivalent ways to proceed, the probability of either choice would indeed be $\sim$50\%. However, such a consideration is too simplistic as we discuss below.
 
+\begin{figure}
+\centering
+\includegraphics[width=6in]{appendix2/ToWtime_fits.pdf}
+\caption[Empirical cumulative probability distributions for ToW times]{Empirical cumulative probability distributions for ToW times \\
+The time for which cargos underwent ToW in 90 degree (normal) geometries was measured in experiments and simulations. Cumulative distributions are shown for each geometry. To aid interpretation, medians are highlighted with dotted lines. Fits to gamma cumulative distribution functions are shown in dashed lines. Good fits to gamma distributions with shape parameter 2-3 indicate distributions are well approximated as generated from 2-3 independent exponential events which we interpret as motor unbinding events.
+} \label{fig:ToWtimes}
+\end{figure}
+
 Experimental results allow for sensitive identification of ToW, so that ToW events can be analyzed separately from trivial ``no-ToW" intersection passages (Fig. \ref{fig:3}). The same analysis can be performed for simulated events (Fig. \ref{fig:4}B-D). A careful analysis of the simulations helps us shed light on the mechanistic details of cargo navigation.
 
 We first assessed whether the number of motors in the two ensembles is in fact equal in our simulations. We find that contrary to na\"ive expectation, the number of engaged motors on the secondary MT is comparable but consistently lower than that on the primary MT (ratio of $\sim$0.7; Fig. \ref{fig:num_engagedEXP}). The reason is that the motors already engaged on the primary MT constrain the bead from full range of linear and rotational diffusion. Once a ToW starts, the bead diffusion is even more constrained; this curtails the number of motors that can reach the secondary MT. Thus, the team of motors pulling along the primary MT generally has an advantage. However, the two paths to proceed are not equivalent either. The crossing MT itself can serve as an obstacle for bead progress and exert a force which hinders the MC from passing (Fig. \ref{fig:4}G). The smooth decrease from passing to switching prevalence across our experimental geometries (Fig. \ref{fig:3}B) therefore reflects the balance between net motor activity (which is biased in favor of moving along the primary MT) and steric hindrance from the crossing MT.
+
+\begin{figure}
+\centering
+\includegraphics[width=4in]{appendix2/num_engagedEXP.pdf}
+\caption[Number of motors engaged on MTs during ToW]{ Number of motors engaged on MTs during ToW\\
+The mean number of motors engaged on the primary (\textit{top}) and crossing (\textit{center}) MTs during simulated ToWs are shown for each geometry. Additionally, the ratio of the mean number of motors engaged on the crossing MT to the mean number engaged on the primary MT is shown (\textit{bottom}). Data are represented as mean +/- SEM. Separation distances are colored as specified in the legend in the top panel.
+} \label{fig:num_engagedEXP}
+\end{figure}
 
 \subsection{The limits of geometric regulation}
 
