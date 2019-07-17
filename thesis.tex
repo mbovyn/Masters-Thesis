@@ -20,7 +20,7 @@
 \graphicspath{{project1/}{background/}{appendix1/}}
 
 %http://codydunne.blogspot.com/2012/01/suppressing-bibtex-fields-for-specific.html
-\usepackage[style=phys,backend=bibtex,isbn=false,url=false,eprint=false,maxnames=5,minnames=2]{biblatex}
+\usepackage[style=phys,biblabel=brackets,backend=bibtex,isbn=false,url=false,eprint=false,maxnames=5,minnames=2]{biblatex}
 \addbibresource{intersectionspaper,background/background,project1/project1,appendix1/appendix1}
 
 \AtEveryBibitem{% Clean up the bibtex rather than editing it
@@ -138,7 +138,7 @@
 % abbrv is only a suggestion.
 %\bibliographystyle{abbrv}
 %\bibliography{intersectionspaper,background/background,project1/project1,appendix1/appendix1}
-\printbibliography
+\mybibliography
 
 % The Thesis Manual says not to include appendix figures and tables in
 % the List of Figures and Tables, respectively, so these commands from

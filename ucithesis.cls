@@ -270,13 +270,14 @@
 }
 
 % Redefine the bibliography to make it single-spaced.
-\renewcommand{\bibliography}[1]{%
-  \if@filesw
-    \immediate\write\@auxout{\string\bibdata{#1}}%
-  \fi
+\newcommand{\mybibliography}{%
+  %\if@filesw
+  %  \immediate\write\@auxout{\string\bibdata{#1}}%
+  %\fi
   % Make sure the table of contents has an entry for the bibliography
   \addcontentsline{toc}{chapter}{Bibliography}
   \begin{singlespacing}
-  \@input@{\jobname.bbl}
+  %\@input@{\jobname.bbl}
+  \printbibliography
   \end{singlespacing}
 }
