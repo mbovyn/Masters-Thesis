@@ -15,8 +15,30 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{array}
+
 \usepackage{graphicx}
-\usepackage{natbib}
+\graphicspath{{project1/}{background/}{appendix1/}}
+
+%http://codydunne.blogspot.com/2012/01/suppressing-bibtex-fields-for-specific.html
+\usepackage[style=phys,backend=bibtex,isbn=false,url=false,eprint=false,maxnames=5,minnames=2]{biblatex}
+\addbibresource{intersectionspaper,background/background,project1/project1,appendix1/appendix1}
+
+\AtEveryBibitem{% Clean up the bibtex rather than editing it
+ %\clearlist{address}
+ %\clearfield{date}
+ %\clearfield{eprint}
+ %\clearfield{isbn}
+ %\clearfield{issn}
+ %\clearlist{location}
+ %\clearfield{month}
+ %\clearfield{series}
+ 
+ \ifentrytype{book}{}{% Remove publisher and editor except for books
+  \clearlist{publisher}
+  \clearname{editor}
+ }
+}
+
 \usepackage{relsize}
 \usepackage{floatrow}
 \floatsetup[table]{capposition=top}
@@ -114,8 +136,9 @@
 
 % "References should be formatted in style most common in discipline",
 % abbrv is only a suggestion.
-\bibliographystyle{abbrv}
-\bibliography{intersectionspaper,background/background,project1/project1,appendix1/appendix1}
+%\bibliographystyle{abbrv}
+%\bibliography{intersectionspaper,background/background,project1/project1,appendix1/appendix1}
+\printbibliography
 
 % The Thesis Manual says not to include appendix figures and tables in
 % the List of Figures and Tables, respectively, so these commands from
