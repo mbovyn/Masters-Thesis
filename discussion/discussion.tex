@@ -1,3 +1,34 @@
 \chapter{Discussion}
 
-We'll later use this simulator to ...
+The results detailed in the previous two chapters describe how specific cargos, engineered outside of the cell, navigate intersections between two microtubules, also constructed outside the cell.
+This study adds to previous \textit{in vitro} work on cargo routing at intersections, which described the ability of cargos to switch between microtubules at intersections constructed by laying microtubules on top of each other \cite{Ross2008}.
+This work adds to our understanding of how cargos switch microtubules by extending into three dimensions.
+Doing so necessitated the development of sophisticated new experimental methods by the Vershinin lab, by which the position of two microtubules can be controlled relative to each other with high precision.
+This was achieved by using holography to create and individually manipulate several optical traps \cite{Bergman2015}.
+Using this technique, we were able to find that intersection geometry can influence cargos to switch or pass with different probability.
+
+To help understand this result, we used a computational model.
+We based the model on basic physics of rigid bodies and the well-known \textit{in vitro} behavior of the molecular motors used in the experiments.
+The model allowed us to understand that the routing outcomes can be understood through a balance between the steric hinderance of the crossing microtubule, which influences cargos to switch, with the stronger motor team on the primary microtubule, which influences cargos to pass.
+The geometry of the intersection dictates how strongly steric hinderance affects the cargo.
+
+The cell interior is significantly more complex than our experiments or simulations.
+The cytoplasm is highly visco-elastic for intracellular cargos \cite{Guo2014,Ahmed2018}.
+Both kinesin and dynein motors are often present on cargos \cite{Gross2004,Hancock2014}, along with a host of other molecules which regulate their activity (e.g. \cite{Reddy2016}).
+Microtubules are adorned with many molecules thought to regulate the workings of the motors in different ways \cite{Yu2015,Sirajuddin2014}.
+In the face of this complexity, what does our study add to the understanding of how cargos are directed in the cell?
+
+First, it establishes that geometry alone can influence cargo routing.
+Regulation of transport is often thought about through the lens of molecular specificity --- how molecules which are present on a cargo change transport properties.
+This result points out physical size of the cargo and intersection angle as important properties for cargo routing, which are independent of the molecules present.
+As a result, the cell could route cargos of different sizes in different ways.
+
+Second, while the experiments and modeling were done in a simplified situation, the explanation we find for why the results are the way they are is not specific to the particular case we examine.
+Microtubules will pose a steric hinderance to cargos moving in the cell.
+How much hinderance depends on the rigidity of the cargo, pointing to a possible role for cargo rigidity in routing. 
+Since we identified the stronger motor team on the primary microtubule as an important factor in determining routing outcomes, we can infer that different motor organizations on the surface of the cargo may modulate this effect.
+Therefore setting motor organization might be a method for the cell to control cargo routing.
+
+Third, it establishes baseline behavior. If the cell extensively uses the molecules which decorate microtubules to control intersection navigation, we can understand that the cell is using those molecules to get a specific result that is different than the one it would get without those molecules. This is in contrast to, for example, the idea that the cell needs molecules there to get any switching.
+
+In the future, we hope to expand on this work in several ways. We are interested in assaying the navigation outcomes of organelles purified from cells. The Gross lab has the ability to purify lipid droplets \cite{Reddy2016}, which could be assayed for switching in a similar way to the \textit{in vitro} engineered cargos in this work. We are also interested in understanding how various microtubule associated proteins (such as Tau, on which the Vershinin and Gross labs have worked previously \cite{Vershinin2007}) may modulate switching probabilities. 

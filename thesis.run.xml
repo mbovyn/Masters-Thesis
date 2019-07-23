@@ -86,7 +86,7 @@
       <file>thesis-blx.bib</file>
     </requires>
     <requires type="editable">
-      <file>intersectionspaper,background/background,project1/project1,appendix1/appendix1</file>
+      <file>intersectionspaper,background/background,project1/project1,appendix1/appendix1,discussion/discussion</file>
     </requires>
     <requires type="static">
       <file>biblatex.bst</file>
